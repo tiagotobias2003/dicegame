@@ -2,7 +2,6 @@ package com.lunaltas.dicegame.Controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -52,7 +51,7 @@ public class UsersController {
     return "/users/edit";
   }
 
-  @PutMapping("/update/{id}") // atualizar usuário - put
+  @PutMapping("/update/{id}") // atualizar usuário - put+++
   public String update(@PathVariable Long id) {
     System.out.println("**********");
     System.out.println("********** Passou pelo update - ID: " + id + " UsersController");

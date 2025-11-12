@@ -10,10 +10,10 @@
 <body>
       <main>
       <div class="container py-4">
-        <div th:replace="fragments/dashboard :: header"></div>
+        <div th:replace="~{fragments/dashboard :: header}"></div>
         <div class="row">
           <div class="col-md-2">
-            <div th:replace="fragments/dashboard :: menu-sidebar"></div>
+            <div th:replace="~{fragments/dashboard :: menu-sidebar}"></div>
           </div>
           <div class="col-md-10">
               <a href="/users/index" class="btn btn-secondary btn-sm float-end">
@@ -62,7 +62,7 @@
               </div>
           </div>
         </div>
-        <div th:replace="fragments/dashboard :: footer"></div>
+        <div th:replace="~{fragments/dashboard :: footer}"></div>
       </div>
     </main>
 

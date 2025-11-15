@@ -2,9 +2,11 @@ package com.lunaltas.dicegame.service;
 
 import java.util.List;
 
+import org.springframework.security.core.userdetails.UserDetailsService;
+
 import com.lunaltas.dicegame.domain.User;
 
-public interface UserService {
+public interface UserService extends UserDetailsService {
 
 	void save(User user);
 	

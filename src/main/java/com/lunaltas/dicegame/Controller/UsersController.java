@@ -40,6 +40,11 @@ public class UsersController {
 
   @PostMapping("/create") // salvar novo usuário
   public String create(@Valid User user, BindingResult result, RedirectAttributes redirectAttributes) {
+    // Validação customizada para senha
+    if (user.getPassword() != null && (user.getPassword().length() < 8 || user.getPassword().length() > 20)) {
+      result.rejectValue("password", "error.password", "A senha deve ter entre 8 e 20 caracteres.");
+    }
+    
     if (result.hasErrors()) {
 			return "/users/new";
 		}
@@ -62,6 +67,16 @@ public class UsersController {
 
   @PutMapping("/update/{id}") // atualizar usuário - put+++
   public String update(@PathVariable Long id, @Valid User user, BindingResult result, RedirectAttributes redirectAttributes) {
+    // Validação customizada para senha (apenas se foi informada uma nova senha)
+    if (user.getPassword() != null && !user.getPassword().isEmpty()) {
+      // Verifica se não é uma senha já criptografada (BCrypt sempre começa com $2a$ ou $2b$)
+      if (!user.getPassword().startsWith("$2a$") && !user.getPassword().startsWith("$2b$")) {
+        if (user.getPassword().length() < 8 || user.getPassword().length() > 20) {
+          result.rejectValue("password", "error.password", "A senha deve ter entre 8 e 20 caracteres.");
+        }
+      }
+    }
+    
     if (result.hasErrors()) {
 			return "/users/edit";
 		}

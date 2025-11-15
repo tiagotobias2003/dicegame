@@ -8,7 +8,6 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 
 @SuppressWarnings("serial")
 @Entity
@@ -26,8 +25,7 @@ public class User extends AbstractEntity<Long> {
 	private String email;
 
   @NotBlank(message = "A senha é obrigatória.")
-  @Size(min = 8, max = 20, message = "A senha deve ter entre 8 e 20 caracteres.")
-  @Column(name = "password", nullable = false, length = 60)
+  @Column(name = "password", nullable = false)
 	private String password;
 
   @NotBlank(message = "O papel é obrigatório.")

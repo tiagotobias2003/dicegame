@@ -7,7 +7,6 @@ Este documento apresenta uma análise detalhada de cada fase do desenvolvimento 
 ---
 
 ## 📋 Tópico 1: Criação das Classes de Implementação dos Models
-**Data:** 11/11/2025
 
 ### Descrição da Fase
 
@@ -128,7 +127,6 @@ Ao final desta fase, o projeto possuía:
 ---
 
 ## 📋 Tópico 2: Integração dos Models com Banco de Dados
-**Data:** 12/11/2025
 
 ### Descrição da Fase
 
@@ -276,7 +274,6 @@ Ao final desta fase, o projeto possuía:
 ---
 
 ## 📋 Tópico 3: Integração dos Controllers com as Views e Models
-**Data:** 18/11/2025 - 19/11/2025
 
 ### Descrição da Fase
 
@@ -487,7 +484,6 @@ Ao final desta fase, o projeto possuía:
 ---
 
 ## 📋 Tópico 4: Finalização do Projeto
-**Data:** 25/11/2025 - 26/11/2025
 
 ### Descrição da Fase
 
